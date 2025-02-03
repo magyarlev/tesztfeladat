@@ -1,0 +1,38 @@
+header {
+  height: 80px;
+  position: relative;
+
+  box-shadow: 0 2px 12px #0a113d1a;
+
+  #logo {
+    top: 25px;
+    position: absolute;
+    left: 138px;
+    width: 130px;
+    height: 34px;
+  }
+
+  #logout {
+    display: flex;
+    gap: 13.4px;
+    top: 31px;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 220px;
+    img {
+      width: 24.6px;
+      height: 18px;
+    }
+    width: 93px;
+    height: 18px;
+    font-size: 14px;
+    #logout-text {
+      align-items: center;
+      color: #0a113d;
+      height: 18px;
+      line-height: 16px;
+      letter-spacing: 0.5px;
+    }
+  }
+}
