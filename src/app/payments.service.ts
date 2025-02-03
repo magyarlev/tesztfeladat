@@ -14,18 +14,18 @@ export class PaymentsService {
       status: Status.Folyamatban,
     },
     {
+      id: '1234563434',
+      method: 'Bankkártya',
+      date: '2025.01.13',
+      amount: 5000,
+      status: Status.Sikertelen,
+    },
+    {
       id: 'EPAYMT123513',
       method: 'Átutalás',
       date: '2024.12.05',
       amount: 5000,
       status: Status.Beérkezett,
-    },
-    {
-      id: '123456213',
-      method: 'Bankkártya',
-      date: '2025.01.13',
-      amount: 5000,
-      status: Status.Sikertelen,
     },
     {
       id: '123456213',
