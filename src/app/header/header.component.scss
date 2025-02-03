@@ -1,9 +1,10 @@
 header {
-  height: 80px;
+  height: var(--header-height);
   position: relative;
-
   box-shadow: 0 2px 12px #0a113d1a;
-
+  .wrapper {
+    max-width: 1180px;
+  }
   #logo {
     top: 25px;
     position: absolute;

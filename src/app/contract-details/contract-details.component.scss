@@ -1,9 +1,7 @@
 .contract-details-wrapper {
   width: 303px;
-  height: calc(100% - 80px);
-  position: absolute;
-  left: 130px;
-
+  height: calc(100vh - var(--header-height));
+  margin: 0 auto;
   box-shadow: 0 2px 12px #0a113d1a;
 
   .insurance-type {

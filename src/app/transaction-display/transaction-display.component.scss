@@ -1,12 +1,13 @@
 .grid {
   width: 100%;
   display: grid;
+  gap: 20px;
   grid-template-columns: repeat(5, 1fr) 10px;
 }
 
 .items {
-  width: 822px;
   display: flex;
+  flex-grow: 75%;
   flex-direction: column;
   gap: 20px;
 }

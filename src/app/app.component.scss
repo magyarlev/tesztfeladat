@@ -1,5 +1,6 @@
-.main-section {
+main {
   display: flex;
-  justify-content: space-around;
+  gap: 30px;
+  max-width: 1180px;
   margin: 0 auto;
 }
