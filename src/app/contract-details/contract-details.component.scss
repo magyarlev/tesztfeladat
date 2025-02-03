@@ -1,8 +1,27 @@
 .contract-details-wrapper {
   width: 303px;
+  height: calc(100% - 80px);
+  position: absolute;
+  left: 130px;
+
+  box-shadow: 0 2px 12px #0a113d1a;
 
   .insurance-type {
-    width: 273px;
+    padding: 24px 0 20px 20px;
     font-size: 15px;
+    color: #283168;
+    font-weight: 600;
+    line-height: 20.43px;
+    letter-spacing: 0.75px;
+    border-bottom: 1px solid #f1f2f4;
+  }
+
+  .info-group {
+    color: #3d424c;
+    padding: 15px 0 0 20px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20.48px;
+    letter-spacing: 0.75px;
   }
 }
