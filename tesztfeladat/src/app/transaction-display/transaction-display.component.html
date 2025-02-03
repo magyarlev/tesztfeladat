@@ -1,19 +1,104 @@
 <section class="transactions">
-  <div class="tabs"></div>
-  <div class="items">
-    <div ngbAccordion>
-      <div ngbAccordionItem [collapsed]="false">
-        <h2 ngbAccordionHeader>
-          <button ngbAccordionButton>Simple</button>
-        </h2>
-        <div ngbAccordionCollapse>
-          <div ngbAccordionBody>
-            <ng-template>
-              <app-transaction-item></app-transaction-item>
-            </ng-template>
+  <div class="tabs">
+    <ul ngbNav #nav="ngbNav" class="nav-tabs">
+      <li [ngbNavItem]="1">
+        <button ngbNavLink>Fizetendő Tételek</button>
+        <ng-template ngbNavContent>
+          <div class="items">
+            @for (payment of payments; track payment.id) {
+
+            <div ngbAccordion>
+              <div ngbAccordionItem [collapsed]="false">
+                <h2 ngbAccordionHeader>
+                  <button ngbAccordionButton>
+                    <div class="grid">
+                      <div class="id">{{ payment.id }}</div>
+                      <div class="method">{{ payment.method }}</div>
+                      <div class="date">{{ payment.date }}</div>
+                      <div class="amount">{{ payment.amount }}</div>
+                      <div class="status">{{ payment.status }}</div>
+                    </div>
+                  </button>
+                </h2>
+                <div ngbAccordionCollapse>
+                  <div ngbAccordionBody>
+                    <ng-template>
+                      <app-transaction-item></app-transaction-item>
+                    </ng-template>
+                  </div>
+                </div>
+              </div>
+            </div>
+            }
           </div>
-        </div>
-      </div>
-    </div>
+        </ng-template>
+      </li>
+      <li [ngbNavItem]="2">
+        <button ngbNavLink>Eseti díj befizetése</button>
+        <ng-template ngbNavContent>
+          <div class="items">
+            @for (payment of payments; track payment.id) {
+
+            <div ngbAccordion>
+              <div ngbAccordionItem [collapsed]="false">
+                <h2 ngbAccordionHeader>
+                  <button ngbAccordionButton>
+                    <div class="grid">
+                      <div class="id">{{ payment.id }}</div>
+                      <div class="method">{{ payment.method }}</div>
+                      <div class="date">{{ payment.date }}</div>
+                      <div class="amount">{{ payment.amount }}</div>
+                      <div class="status">{{ payment.status }}</div>
+                    </div>
+                  </button>
+                </h2>
+                <div ngbAccordionCollapse>
+                  <div ngbAccordionBody>
+                    <ng-template>
+                      <app-transaction-item></app-transaction-item>
+                    </ng-template>
+                  </div>
+                </div>
+              </div>
+            </div>
+            }
+          </div>
+        </ng-template>
+      </li>
+      <li [ngbNavItem]="3">
+        <button ngbNavLink>Fizetési előzmények</button>
+        <ng-template ngbNavContent>
+          <div class="items">
+            @for (payment of payments; track payment.id) {
+
+            <div ngbAccordion>
+              <div ngbAccordionItem [collapsed]="false">
+                <h2 ngbAccordionHeader>
+                  <button ngbAccordionButton>
+                    <div class="grid">
+                      <div class="id">{{ payment.id }}</div>
+                      <div class="method">{{ payment.method }}</div>
+                      <div class="date">{{ payment.date }}</div>
+                      <div class="amount">{{ payment.amount }}</div>
+                      <div class="status">{{ payment.status }}</div>
+                    </div>
+                  </button>
+                </h2>
+                <div ngbAccordionCollapse>
+                  <div ngbAccordionBody>
+                    <ng-template>
+                      <app-transaction-item></app-transaction-item>
+                    </ng-template>
+                  </div>
+                </div>
+              </div>
+            </div>
+            }
+          </div>
+        </ng-template>
+      </li>
+    </ul>
+
+    <div [ngbNavOutlet]="nav" class="mt-2"></div>
   </div>
 </section>
