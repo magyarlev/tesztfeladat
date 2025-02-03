@@ -1,7 +1,19 @@
 <section class="transactions">
   <div class="tabs"></div>
-  <div class="accordion" id="accordionExample">
-    <app-transaction-card></app-transaction-card>
-    <app-transaction-card></app-transaction-card>
+  <div class="items">
+    <div ngbAccordion>
+      <div ngbAccordionItem [collapsed]="false">
+        <h2 ngbAccordionHeader>
+          <button ngbAccordionButton>Simple</button>
+        </h2>
+        <div ngbAccordionCollapse>
+          <div ngbAccordionBody>
+            <ng-template>
+              <app-transaction-item></app-transaction-item>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
