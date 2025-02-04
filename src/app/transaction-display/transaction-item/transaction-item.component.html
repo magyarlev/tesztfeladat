@@ -5,16 +5,21 @@
     <div class="title-date">Dátum</div>
     <div class="title-amount">Összeg</div>
     <div class="title-status">Státusz</div>
+    <div></div>
+    <div></div>
   </div>
 
-  @for (payment of payments; track payment.id) {
-  <div ngbAccordion>
-    <div ngbAccordionItem>
-      <h2 ngbAccordionHeader>
-        <button ngbAccordionButton>
+  <div class="accordion-wrapper">
+    @for (payment of payments; track payment.id) {
+    <div ngbAccordion>
+      <div ngbAccordionItem class="accordion">
+        <div ngbAccordionHeader class="accordion-header">
           <div class="details-group">
             <div class="id">
-              <img src="extension arrow.png" alt="" />{{ payment.id }}
+              <button class="id-extension-btn">
+                <img src="extension arrow.png" alt="extension arrow" />
+              </button>
+              <span>{{ payment.id }}</span>
             </div>
             <div class="method">{{ payment.method }}</div>
             <div class="date">{{ payment.date }}</div>
@@ -23,15 +28,19 @@
               <div class="indicator" [ngClass]="payment.status"></div>
               {{ payment.status }}
             </div>
+            <div class="paperclip">
+              <img src="paperclip.png" alt="paperclip" />
+            </div>
+            <button ngbAccordionButton></button>
           </div>
-        </button>
-      </h2>
-      <div ngbAccordionCollapse>
-        <div ngbAccordionBody>
-          <ng-template>Content for the first item</ng-template>
+        </div>
+        <div ngbAccordionCollapse>
+          <div ngbAccordionBody>
+            <ng-template>Content for the first item</ng-template>
+          </div>
         </div>
       </div>
     </div>
+    }
   </div>
-  }
 </section>
