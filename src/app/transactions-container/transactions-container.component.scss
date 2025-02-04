@@ -1,19 +1,34 @@
 nav {
   display: flex;
-  gap: 70px;
+  gap: 20px;
   border-bottom: 3px solid #f1f2f4;
   button {
+    position: relative;
+    width: 160px;
     padding: 40px 0 37px;
     border: none;
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.75px;
-    font-weight: 600;
     color: #283168;
     background-color: #ffffff;
-    border-bottom: 3px solid white;
+    font-weight: 400;
     &.active {
-      border-bottom: 3px solid #01bba1;
+      font-weight: 600;
+      text-align: center;
+      &::after {
+        background-color: #01bba1;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: transparent;
+      transition: background-color 0.3s ease;
     }
   }
 }
