@@ -1,0 +1,56 @@
+<div ngbAccordion class="accordion">
+  <div ngbAccordionItem>
+    <div ngbAccordionHeader class="accordion-header">
+      <div class="details-group">
+        <div
+          class="transaction-id"
+          [ngClass]="{ expanded: idExtensionBtnExpanded }"
+        >
+          <button
+            class="id-extension-btn"
+            (click)="toggleIdExpensionBtn()"
+            [ngClass]="{
+              expanded: idExtensionBtnExpanded,
+              'long-id': hasLongId
+            }"
+          >
+            <img src="extension arrow.png" alt="extension arrow" />
+          </button>
+          <span
+            class="id-text"
+            [ngClass]="{
+              collapsed: !idExtensionBtnExpanded
+            }"
+            #transactionId
+          >
+            {{ payment().id }}
+          </span>
+        </div>
+        <div class="method">
+          <span [ngClass]="{ hidden: idExtensionBtnExpanded }">{{
+            payment().method
+          }}</span>
+        </div>
+        <div class="date">{{ payment().date }}</div>
+        <div class="amount">{{ payment().amount }}</div>
+        <div class="status">
+          <div class="indicator" [ngClass]="payment().status"></div>
+          {{ payment().status }}
+        </div>
+        <div class="paperclip">
+          <a href="#" onclick="return false"
+            ><img src="paperclip.png" alt="paperclip"
+          /></a>
+        </div>
+        <button ngbAccordionButton></button>
+      </div>
+    </div>
+    <div ngbAccordionCollapse>
+      <div ngbAccordionBody>
+        <ng-template>
+          <app-item-details></app-item-details>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

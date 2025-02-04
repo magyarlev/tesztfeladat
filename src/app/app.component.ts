@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
 import { ContractDetailsComponent } from './contract-details/contract-details.component';
-import { TransactionDisplayComponent } from './transaction-display/transaction-display.component';
+import { TransactionDisplayComponent } from './transactions-container/transactions-container.component';
 
 @Component({
   selector: 'app-root',

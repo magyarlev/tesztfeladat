@@ -1,0 +1,17 @@
+<section class="item-wrapper">
+  <div class="title-group">
+    <div class="title-id">Azonosító</div>
+    <div class="title-method">Befizetés módja</div>
+    <div class="title-date">Dátum</div>
+    <div class="title-amount">Összeg</div>
+    <div class="title-status">Státusz</div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <div class="accordion-wrapper">
+    @for (payment of payments; track payment.id) {
+    <app-transaction-list-item [payment]="payment"></app-transaction-list-item>
+    }
+  </div>
+</section>

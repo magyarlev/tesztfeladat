@@ -1,17 +1,17 @@
 import { Routes } from '@angular/router';
-import { TransactionItemComponent } from './transaction-display/transaction-item/transaction-item.component';
+import { TransactionListComponent } from './transactions-container/transaction-list/transaction-list.component';
 
 export const routes: Routes = [
   {
     path: 'items1',
-    component: TransactionItemComponent,
+    component: TransactionListComponent,
   },
   {
     path: 'items2',
-    component: TransactionItemComponent,
+    component: TransactionListComponent,
   },
   {
     path: 'items3',
-    component: TransactionItemComponent,
+    component: TransactionListComponent,
   },
 ];

@@ -1,18 +1,13 @@
-.accordion-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  .accordion {
-    .accordion-header {
-      height: var(--header-height);
-    }
-  }
+.accordion {
+  box-shadow: 0 4px 8px #0000001a;
+}
+.accordion-header {
+  height: var(--header-height);
 }
 
-.title-group,
 .details-group {
   display: grid;
-  grid-template-columns: 140px 120px repeat(2, 90px) 110px 20px 20px;
+  grid-template-columns: var(--main-grid-cell-width) 120px repeat(2, 90px) 110px 20px 20px;
   gap: 30px;
 }
 
@@ -38,20 +33,16 @@
   .amount {
     font-weight: 600;
   }
-}
-
-.title-group {
-  padding: 30px 20px 15px 0;
-  font-weight: 400;
-  font-size: 14px;
-  color: #6f7381;
-  line-height: 16px;
-  letter-spacing: 0.5px;
-  .title-id {
-    padding-left: 20px;
+  .method {
+    span {
+      &.hidden {
+        display: none;
+      }
+    }
   }
 }
-.id {
+
+.transaction-id {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -63,8 +54,12 @@
   .id-extension-btn {
     display: flex;
     transition: transform 0.3s ease;
+    display: none;
     &.expanded {
       transform: rotate(180deg);
+    }
+    &.long-id {
+      display: block;
     }
   }
   span {

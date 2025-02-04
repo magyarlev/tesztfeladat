@@ -1,0 +1,23 @@
+.title-group {
+  display: grid;
+  grid-template-columns: 140px 120px repeat(2, 90px) 110px 20px 20px;
+  gap: 30px;
+}
+
+.title-group {
+  padding: 30px 20px 15px 0;
+  font-weight: 400;
+  font-size: 14px;
+  color: #6f7381;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+  .title-id {
+    padding-left: 20px;
+  }
+}
+
+.accordion-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
