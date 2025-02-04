@@ -23,3 +23,9 @@
     letter-spacing: 0.75px;
   }
 }
+
+@media screen and (max-width: 1180px) {
+  .contract-details-wrapper {
+    display: none;
+  }
+}
