@@ -1,7 +1,10 @@
 .title-group {
   display: grid;
-  grid-template-columns: 140px 120px repeat(2, 90px) 110px 20px 20px;
+  grid-template-columns: 176px 120px repeat(2, 90px) 110px 20px 20px;
   gap: 30px;
+  .title-id {
+    padding-left: 20px;
+  }
 }
 
 .title-group {
@@ -11,9 +14,6 @@
   color: #6f7381;
   line-height: 16px;
   letter-spacing: 0.5px;
-  .title-id {
-    padding-left: 20px;
-  }
 }
 
 .accordion-wrapper {

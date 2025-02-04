@@ -1,21 +1,28 @@
 <div ngbAccordion class="accordion">
   <div ngbAccordionItem>
     <div ngbAccordionHeader class="accordion-header">
+      <div class="expand-btn">
+        <button
+          class="id-extension-btn"
+          (click)="toggleIdExpensionBtn()"
+          [ngClass]="{
+            expanded: idExtensionBtnExpanded,
+          }"
+        >
+          <img
+            src="extension arrow.png"
+            [ngClass]="{
+              'long-id': hasLongId
+            }"
+            alt="extension arrow"
+          />
+        </button>
+      </div>
       <div class="details-group">
         <div
           class="transaction-id"
           [ngClass]="{ expanded: idExtensionBtnExpanded }"
         >
-          <button
-            class="id-extension-btn"
-            (click)="toggleIdExpensionBtn()"
-            [ngClass]="{
-              expanded: idExtensionBtnExpanded,
-              'long-id': hasLongId
-            }"
-          >
-            <img src="extension arrow.png" alt="extension arrow" />
-          </button>
           <span
             class="id-text"
             [ngClass]="{

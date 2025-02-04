@@ -3,6 +3,18 @@
 }
 .accordion-header {
   height: var(--header-height);
+  display: flex;
+  align-items: center;
+  button {
+    border: none;
+    background-color: white;
+    justify-self: center;
+    align-self: center;
+    box-shadow: none;
+    &:focus {
+      outline: none;
+    }
+  }
 }
 
 .details-group {
@@ -20,16 +32,7 @@
 .details-group {
   padding-right: 30px;
   height: 100%;
-  button {
-    border: none;
-    background-color: white;
-    justify-self: center;
-    align-self: center;
-    box-shadow: none;
-    &:focus {
-      outline: none;
-    }
-  }
+
   .amount {
     font-weight: 600;
   }
@@ -42,6 +45,28 @@
   }
 }
 
+.expand-btn {
+  width: 36px;
+  padding: 0 10px 0 20px;
+  .id-extension-btn {
+    display: flex;
+    transition: transform 0.3s ease;
+    &.expanded {
+      transform: rotate(180deg);
+    }
+  }
+
+  img {
+    display: none;
+    &.long-id {
+      display: block;
+      width: 6px;
+      height: 12px;
+      color: #283168;
+    }
+  }
+}
+
 .transaction-id {
   display: flex;
   align-items: center;
@@ -50,28 +75,11 @@
   &.expanded {
     overflow: visible;
   }
-  padding-left: 20px;
-  .id-extension-btn {
-    display: flex;
-    transition: transform 0.3s ease;
-    display: none;
-    &.expanded {
-      transform: rotate(180deg);
-    }
-    &.long-id {
-      display: block;
-    }
-  }
   span {
     &.collapsed {
       overflow: hidden;
       text-overflow: ellipsis;
     }
-  }
-  img {
-    width: 6px;
-    height: 12px;
-    color: #283168;
   }
 }
 

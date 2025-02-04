@@ -6,7 +6,7 @@ import {
   viewChild,
 } from '@angular/core';
 import { ItemDetailsComponent } from '../../item-details/item-details.component';
-import { NgClass } from '@angular/common';
+import { CurrencyPipe, NgClass } from '@angular/common';
 import { Payment } from '../../../../types';
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 
