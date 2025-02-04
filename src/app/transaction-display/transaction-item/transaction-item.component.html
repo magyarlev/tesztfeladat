@@ -15,11 +15,20 @@
       <div ngbAccordionItem class="accordion">
         <div ngbAccordionHeader class="accordion-header">
           <div class="details-group">
-            <div class="id">
-              <button class="id-extension-btn">
+            <div class="id" [ngClass]="{ expanded: idExtensionBtnExpanded }">
+              <button
+                class="id-extension-btn"
+                (click)="toggleIdExpensionBtn()"
+                [ngClass]="{ expanded: idExtensionBtnExpanded }"
+              >
                 <img src="extension arrow.png" alt="extension arrow" />
               </button>
-              <span>{{ payment.id }}</span>
+              <span
+                [ngClass]="{
+                  collapsed: !idExtensionBtnExpanded
+                }"
+                >{{ payment.id }}</span
+              >
             </div>
             <div class="method">{{ payment.method }}</div>
             <div class="date">{{ payment.date }}</div>
@@ -29,7 +38,9 @@
               {{ payment.status }}
             </div>
             <div class="paperclip">
-              <img src="paperclip.png" alt="paperclip" />
+              <a href="#" onclick="return false"
+                ><img src="paperclip.png" alt="paperclip"
+              /></a>
             </div>
             <button ngbAccordionButton></button>
           </div>

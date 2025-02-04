@@ -13,4 +13,10 @@ import { Status } from '../../../types';
 export class TransactionItemComponent {
   paymentsService = inject(PaymentsService);
   payments = this.paymentsService.getPayments();
+
+  idExtensionBtnExpanded = false;
+
+  toggleIdExpensionBtn() {
+    this.idExtensionBtnExpanded = !this.idExtensionBtnExpanded;
+  }
 }

@@ -56,12 +56,22 @@
   align-items: center;
   gap: 10px;
   overflow: hidden;
+  &.expanded {
+    overflow: visible;
+  }
+  padding-left: 20px;
   .id-extension-btn {
-    padding-left: 20px;
+    display: flex;
+    transition: transform 0.3s ease;
+    &.expanded {
+      transform: rotate(180deg);
+    }
   }
   span {
-    overflow: hidden;
-    text-overflow: ellipsis;
+    &.collapsed {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
   img {
     width: 6px;
