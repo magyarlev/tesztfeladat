@@ -1,0 +1,33 @@
+.title-group,
+.details-group {
+  display: flex;
+  gap: 30px;
+}
+
+.id {
+  img {
+    width: 8px;
+    height: 3.5px;
+    color: #283168;
+  }
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  &.Folyamatban {
+    background-color: #a1caff;
+  }
+  &.Beérkezett {
+    background-color: #01bba1;
+  }
+  &.Sikertelen {
+    background-color: #dc414f;
+  }
+}
