@@ -39,4 +39,32 @@ header {
       letter-spacing: 0.5px;
     }
   }
+
+  .mobile-burger {
+    display: none;
+  }
+
+  @media screen and (max-width: 880px) {
+    #logout {
+      justify-content: end;
+      right: 20px;
+      #logout-text {
+        display: none;
+      }
+    }
+
+    .mobile-burger {
+      display: flex;
+      position: absolute;
+      right: 60px;
+      top: 25px;
+      border: none;
+      border-radius: 50%;
+      img {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
 }
