@@ -33,3 +33,19 @@ nav {
     }
   }
 }
+
+@media screen and (max-width: 1180px) {
+  nav {
+    justify-content: center;
+    word-break: break-word;
+  }
+}
+@media screen and (max-width: 600px) {
+  nav {
+    width: 100%;
+    button {
+      padding: 24px 0;
+      width: auto;
+    }
+  }
+}

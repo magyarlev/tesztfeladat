@@ -12,6 +12,7 @@ export class PaymentsService {
       date: '2025.02.03',
       amount: '5 000 Ft',
       status: Status.Folyamatban,
+      attachment: true,
     },
     {
       id: '123456789',
@@ -19,6 +20,7 @@ export class PaymentsService {
       date: '2024.12.05',
       amount: '5 000 Ft',
       status: Status.Beérkezett,
+      attachment: false,
     },
     {
       id: 'EPAYMT1235131254782691',
@@ -26,6 +28,7 @@ export class PaymentsService {
       date: '2025.01.13',
       amount: '5 000 Ft',
       status: Status.Sikertelen,
+      attachment: true,
     },
     {
       id: 'EPAYMT12351312547823491',
@@ -33,6 +36,7 @@ export class PaymentsService {
       date: '2025.02.03',
       amount: '5 000 Ft',
       status: Status.Beérkezett,
+      attachment: true,
     },
   ];
 

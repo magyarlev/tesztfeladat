@@ -18,6 +18,9 @@
           />
         </button>
       </div>
+      <div class="indicator-mobile-wrapper">
+        <div class="indicator-mobile" [ngClass]="payment().status"></div>
+      </div>
       <div class="details-group">
         <div
           class="transaction-id"
@@ -38,19 +41,32 @@
             payment().method
           }}</span>
         </div>
-        <div class="date">{{ payment().date }}</div>
+        <div class="date">
+          <span class="date-mobile">Fizetési dátum:</span>
+          <span>{{ payment().date }}</span>
+          <div class="paperclip-mobile">
+            @if (payment().attachment) {
+            <a href="#" onclick="return false"
+              ><img src="paperclip.png" alt="paperclip"
+            /></a>
+            }
+          </div>
+        </div>
         <div class="amount">{{ payment().amount }}</div>
         <div class="status">
           <div class="indicator" [ngClass]="payment().status"></div>
           {{ payment().status }}
         </div>
         <div class="paperclip">
+          @if(payment().attachment) {
           <a href="#" onclick="return false"
             ><img src="paperclip.png" alt="paperclip"
           /></a>
+          }
         </div>
-        <button ngbAccordionButton></button>
       </div>
+
+      <button class="toggle-btn" ngbAccordionButton></button>
     </div>
     <div ngbAccordionCollapse>
       <div ngbAccordionBody>

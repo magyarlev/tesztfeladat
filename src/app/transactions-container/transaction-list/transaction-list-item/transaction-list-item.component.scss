@@ -19,8 +19,8 @@
 
 .details-group {
   display: grid;
-  grid-template-columns: var(--main-grid-cell-width) 120px repeat(2, 90px) 110px 20px 20px;
-  gap: 30px;
+  grid-template-columns: var(--main-grid-cell-width) 120px repeat(2, 90px) 110px 20px;
+  gap: var(--grid-gap);
 }
 
 .details-group > div {
@@ -30,7 +30,6 @@
 }
 
 .details-group {
-  padding-right: 30px;
   height: 100%;
 
   .amount {
@@ -41,6 +40,14 @@
       &.hidden {
         display: none;
       }
+    }
+  }
+  .paperclip,
+  .paperclip-mobile {
+    img {
+      display: inline-block;
+      width: 17px;
+      height: 17px;
     }
   }
 }
@@ -88,10 +95,9 @@
   align-items: center;
   gap: 15px;
 }
-.indicator {
-  width: 6px;
-  height: 6px;
-  border-radius: 6px;
+
+.indicator,
+.indicator-mobile {
   &.Folyamatban {
     background-color: #a1caff;
   }
@@ -100,5 +106,86 @@
   }
   &.Sikertelen {
     background-color: #dc414f;
+  }
+}
+
+.indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+}
+
+.indicator-mobile,
+.indicator-mobile-wrapper,
+.paperclip-mobile,
+.date-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 880px) {
+  .accordion {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .accordion-header {
+    display: flex;
+    height: 102px;
+    justify-content: center;
+    .expand-btn {
+      display: none;
+    }
+    .toggle-btn {
+      width: 60px;
+    }
+  }
+  .details-group {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 0;
+    .method,
+    .transaction-id {
+      display: none;
+    }
+  }
+
+  .details-group > div {
+    font-size: 12px;
+    &.amount {
+      font-size: 16px;
+    }
+  }
+
+  .indicator,
+  .paperclip {
+    display: none;
+  }
+
+  .indicator-mobile-wrapper,
+  .indicator-mobile,
+  .paperclip-mobile,
+  .date-mobile {
+    display: block;
+  }
+
+  .indicator-mobile-wrapper {
+    padding: 16px;
+  }
+
+  .indicator-mobile {
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+  }
+
+  .paperclip-mobile {
+    position: relative;
+    top: -5px;
+  }
+
+  .date {
+    display: flex;
+    gap: 5px;
   }
 }

@@ -1,6 +1,7 @@
 export type Payment = {
   id: string;
   method: string;
+  attachment: boolean;
   date: string;
   amount: string;
   status: string;
