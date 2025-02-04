@@ -1,13 +1,19 @@
-.grid {
-  width: 100%;
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(5, 1fr) 10px;
-}
-
-.items {
+nav {
   display: flex;
-  flex-grow: 75%;
-  flex-direction: column;
-  gap: 20px;
+  gap: 70px;
+  border-bottom: 3px solid #f1f2f4;
+  button {
+    padding: 40px 0 37px;
+    border: none;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.75px;
+    font-weight: 600;
+    color: #283168;
+    background-color: #ffffff;
+    border-bottom: 3px solid white;
+    &.active {
+      border-bottom: 3px solid #01bba1;
+    }
+  }
 }
