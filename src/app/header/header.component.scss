@@ -4,11 +4,14 @@ header {
   box-shadow: 0 2px 12px #0a113d1a;
   .wrapper {
     max-width: 1180px;
+    position: relative;
+    margin: 0 auto;
   }
+
   #logo {
     top: 25px;
     position: absolute;
-    left: 138px;
+    left: 8px;
     width: 130px;
     height: 34px;
   }
@@ -20,7 +23,7 @@ header {
     background-color: transparent;
     border: none;
     position: absolute;
-    right: 220px;
+    right: 8px;
     img {
       width: 24.6px;
       height: 18px;
