@@ -7,7 +7,7 @@ import { Payment, Status } from '../types';
 export class PaymentsService {
   #payments: Payment[] = [
     {
-      id: 'EPAYMT863512',
+      id: 'EPAYMT8635122525146120',
       method: 'Bankkártya',
       date: '2025.02.03',
       amount: 5000,
@@ -21,7 +21,7 @@ export class PaymentsService {
       status: Status.Sikertelen,
     },
     {
-      id: 'EPAYMT123513',
+      id: 'EPAYMT1235131254782691',
       method: 'Átutalás',
       date: '2024.12.05',
       amount: 5000,
