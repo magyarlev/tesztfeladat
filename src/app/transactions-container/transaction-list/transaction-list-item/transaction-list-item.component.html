@@ -5,6 +5,7 @@
         <button
           class="id-extension-btn"
           (click)="toggleIdExpensionBtn()"
+          [disabled]="!hasLongId"
           [ngClass]="{
             expanded: idExtensionBtnExpanded,
           }"
