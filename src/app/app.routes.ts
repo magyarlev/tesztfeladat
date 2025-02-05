@@ -3,6 +3,10 @@ import { TransactionListComponent } from './transactions-container/transaction-l
 
 export const routes: Routes = [
   {
+    path: '',
+    component: TransactionListComponent,
+  },
+  {
     path: 'items1',
     component: TransactionListComponent,
   },
