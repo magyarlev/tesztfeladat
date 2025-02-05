@@ -20,3 +20,44 @@
     }
   }
 }
+
+.mobile-only {
+  display: none;
+}
+
+@media screen and (max-width: 880px) {
+  .wrapper {
+    border-top: 1px solid #f1f2f4;
+    padding: 20px 20px;
+  }
+  .font-style-content {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .font-style-title {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+  }
+
+  .item-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    border: none;
+    :last-child {
+      margin-right: 20px;
+    }
+    .info-group {
+      padding: 25px 0 0 0;
+      gap: 0;
+    }
+    border-bottom: none;
+    .desktop-only {
+      display: none;
+    }
+  }
+  .mobile-only {
+    display: block;
+  }
+}

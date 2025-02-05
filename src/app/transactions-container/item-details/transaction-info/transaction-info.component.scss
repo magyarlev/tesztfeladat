@@ -1,8 +1,12 @@
 .contract-info {
+  padding: 25px 20px;
   color: #3d424c;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  border-top: 1px solid #f1f2f4;
+  border-bottom: 1px solid #f1f2f4;
+
   span {
     font-size: 12px;
     line-height: 16px;
