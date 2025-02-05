@@ -1,0 +1,15 @@
+.contract-info {
+  color: #3d424c;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  span {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+  }
+  div {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
