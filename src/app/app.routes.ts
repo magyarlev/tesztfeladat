@@ -7,6 +7,10 @@ export const routes: Routes = [
     component: TransactionListComponent,
   },
   {
+    path: '**',
+    component: TransactionListComponent,
+  },
+  {
     path: 'items1',
     component: TransactionListComponent,
   },
