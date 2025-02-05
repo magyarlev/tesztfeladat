@@ -53,7 +53,7 @@
 }
 
 .expand-btn {
-  width: 36px;
+  width: 30px;
   padding: 0 10px 0 20px;
   .id-extension-btn {
     display: flex;
@@ -64,9 +64,9 @@
   }
 
   img {
-    display: none;
+    visibility: hidden;
     &.long-id {
-      display: block;
+      visibility: visible;
       width: 6px;
       height: 12px;
       color: #283168;

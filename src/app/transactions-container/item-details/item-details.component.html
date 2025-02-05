@@ -1,6 +1,9 @@
 <section class="item-details">
   <app-date-and-payments class="desktop-only"></app-date-and-payments>
+  <app-transaction-info
+    [payment]="payment()"
+    class="mobile-only"
+  ></app-transaction-info>
   <app-attachment></app-attachment>
-  <app-transaction-info [payment]="payment()"></app-transaction-info>
   <app-date-and-payments class="mobile-only"></app-date-and-payments>
 </section>
